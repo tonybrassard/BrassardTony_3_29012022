@@ -62,11 +62,23 @@ body {
             align-items: center;
     background: #f3f3f3;
     color: #7a7a7a;
+    margin-left: 70px;
   }
   
   .location__city {
-    margin-left: 13px;
-    font-weight: 400;
+    margin-left: 20px;
+  }
+
+  .location__city input {
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 1em;
+    padding: 20px 0px;
+    font-weight: 700;
+  }
+
+  .location__city input:focus {
+    outline: none;
   }
   
   .hero {
@@ -101,6 +113,7 @@ body {
   
   .hero__text {
     text-align: center;
+    max-width: 300px;
   }
   
   .hero__button {
@@ -184,7 +197,7 @@ body {
     transition: .3s;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-    background: white;
+    background: #f7f1ff;
   }
   
   .process__number {
@@ -213,6 +226,169 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .restaurants {
+    margin: 0;
+    background: #f6f6f6;
+    padding: 20px 0px;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .restaurant__cards {
+    display: -ms-grid;
+    display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 300px;
+    grid-gap: 20px;
+  }
+  
+  .restaurant__card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+    border-radius: 20px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .restaurant__card-new {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    background: #99e2d0;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .restaurant__card-new p {
+    color: #1b6150;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  
+  .restaurant__card:hover {
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
+            box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
+  }
+  
+  .restaurant__card-image {
+    width: 100%;
+    height: 190px;
+  }
+  
+  .restaurant__card-image > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .restaurant__block {
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 90px;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .restaurant__block-info {
+    color: black;
+    margin-left: 20px;
+  }
+  
+  .restaurant__block-info > :first-child {
+    font-weight: 700;
+  }
+  
+  .restaurant__block-hearth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 20px;
+    width: 30px;
+  }
+  
+  .restaurant__block .heart {
+    width: 30px;
+    stroke-width: 30;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
+  }
+  
+  .restaurant__block .heart-full {
+    position: absolute;
+    fill: url(#text-fill);
+    stroke: none;
+  }
+  
+  .restaurant__block .heart-empty {
+    width: 50px;
+    position: relative;
+  }
+  
+  .restaurant__block .heart-empty:hover {
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   
   .footer {
@@ -300,6 +476,19 @@ body {
           -ms-flex-direction: row;
               flex-direction: row;
       width: 100%;
+    }
+    .hero__text {
+      text-align: center;
+      max-width: inherit;
+    }
+    .restaurant__cards {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+      -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
     }
     .footer__bloc {
       margin-bottom: 15px;
