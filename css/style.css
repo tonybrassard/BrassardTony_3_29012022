@@ -27,6 +27,109 @@ body {
             flex-direction: column;
   }
 
+  .spinner {
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    -webkit-animation: spinner 2s linear;
+            animation: spinner 2s linear;
+    visibility: hidden;
+  }
+  
+  .spinner__border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 5px solid transparent;
+    border-top: 5px solid #9356DC;
+    border-bottom: 5px solid #9356DC;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: spinner-border 2s linear;
+            animation: spinner-border 2s linear;
+    z-index: 999;
+    visibility: hidden;
+  }
+
+  @-webkit-keyframes spinner {
+    0% {
+      visibility: visible;
+      opacity: 0.9;
+    }
+    70% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes spinner {
+    0% {
+      visibility: visible;
+      opacity: 0.9;
+    }
+    70% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @-webkit-keyframes spinner-border {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes spinner-border {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   .header {
     -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
