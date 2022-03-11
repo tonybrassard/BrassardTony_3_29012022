@@ -477,9 +477,27 @@ body {
     cursor: pointer;
   }
   
-  .restaurant__block .heart-full {
+  .restaurant__block .heart-full1 {
     position: absolute;
-    fill: url(#text-fill);
+    fill: url(#text-fill1);
+    stroke: none;
+  }
+
+  .restaurant__block .heart-full2 {
+    position: absolute;
+    fill: url(#text-fill2);
+    stroke: none;
+  }
+
+.restaurant__block .heart-full3 {
+    position: absolute;
+    fill: url(#text-fill3);
+    stroke: none;
+  }
+
+.restaurant__block .heart-full4 {
+    position: absolute;
+    fill: url(#text-fill4);
     stroke: none;
   }
   
